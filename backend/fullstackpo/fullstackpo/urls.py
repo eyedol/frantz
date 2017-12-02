@@ -15,12 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from api.resources import BolResource
+from api.resources import BolResource, CaseResource
 
 bol_resource = BolResource()
-
+case_resource = CaseResource()
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include(bol_resource.urls)),
+    url(r'^api/', include(case_resource.urls)),
 ]
