@@ -8,7 +8,7 @@ class Bol(models.Model):
     vendor = models.CharField(max_length=200)
 
     def __str__(self):
-    	return vendor
+    	return self.vendor
 
 class Case(models.Model):
 	bol = models.ForeignKey(Bol, on_delete=models.CASCADE)
