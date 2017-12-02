@@ -4,12 +4,14 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppComponent } from './app.component';
 import { BolComponent } from './bol/bol.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BolComponent
+    BolComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
