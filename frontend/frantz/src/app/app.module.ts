@@ -5,6 +5,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppComponent } from './app.component';
 import { BolComponent } from './bol/bol.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { BolsService } from './bol/bols.service';
+import {  HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -15,10 +17,11 @@ import { NavigationComponent } from './navigation/navigation.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     MDBBootstrapModule.forRoot()
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [],
+  providers: [BolsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

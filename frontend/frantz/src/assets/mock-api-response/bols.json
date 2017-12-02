@@ -1,0 +1,20 @@
+{
+    "objects": [
+        {
+            "buyer": "Herbert",
+            "cases": "{['barcode': 'qewrqwe', 'contract': 'asdasdasdfeafa'}]",
+            "created_at": "2017-12-02T15:15:43.377142",
+            "id": 1,
+            "resource_uri": "/api/bol/1/",
+            "vendor": "Hugo"
+        },
+        {
+            "buyer": "Herbert2",
+            "cases": "[{'barcode': 'asd', 'contract': 'asdfeafa'}]",
+            "created_at": "2017-12-02T15:18:19.203218",
+            "id": 2,
+            "resource_uri": "/api/bol/2/",
+            "vendor": "Hugo2"
+        }
+    ]
+}

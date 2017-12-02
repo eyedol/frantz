@@ -1,4 +1,5 @@
+
 export class Case {
-  barcode: string;
-  contract: string;
+  barcode: string  = undefined;
+  contract: string = undefined;
 }
