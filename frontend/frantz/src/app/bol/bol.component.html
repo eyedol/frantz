@@ -1,3 +1,16 @@
-<p>
-  bol works!
-</p>
+<div *ngIf="bolResponse.objects == null || bolResponse.objects.length == 0" class="row">
+  <div class="empty-bol-list flex-center"><strong>No available BOLs.</strong></div>
+</div>
+<div *ngIf="bolResponse.objects !== null && bolResponse.objects.length > 0" class="row center-on-small-only">
+  <div *ngFor="let bol of bolResponse.objects" class="col-md-6 col-sm-12">
+    <div class="card card-cascade narrower">
+        <div class="view gradient-card-header blue-gradient">
+          <h2 class="h2-responsive">{{bol.buyer}}</h2>
+          <p>{{bol.vendor}}</p>
+          <div class="card-body text-center">
+            <p class="card-text"></p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
