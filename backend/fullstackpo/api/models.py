@@ -1,21 +1,43 @@
 from django.db import models
-
+# from django import serializersviewsets
+from tastypie.serializers import Serializer
 # Create your models here.
 
 class Bol(models.Model):
-    created_at = models.DateTimeField(auto_now_add=True)
-    buyer = models.CharField(max_length=200)
-    vendor = models.CharField(max_length=200)
-    cases = models.TextField() #screw this, we'll serialize JSON
+	class Meta:
+		db_table = 'bol'
 
-    def __str__(self):
-    	return self.vendor
+	name = models.CharField(max_length=200, default='')
+	created_at = models.DateTimeField(auto_now_add=True)
+	buyer = models.CharField(max_length=200, default='')
+	seller = models.CharField(max_length=200, default='')
+	# cases = models.TextField(default='')
 
-# class Case(models.Model):
-# 	bol = models.ForeignKey(Bol, on_delete=models.CASCADE)
-# 	itemName = models.CharField(max_length=200)
-# 	contract = models.CharField(max_length=200)
-# 	barcode = models.CharField(max_length=200)
+	def __str__(self):
+		return self.seller
 
-# 	def __str__(self):
-# 		return self.itemName
+class Case(models.Model):
+	class Meta:
+		db_table = 'case'
+
+	bol = models.ForeignKey(Bol, on_delete=models.CASCADE)
+	caseName = models.CharField(max_length=200, default='')
+	caseId = models.CharField(max_length=200, default='')
+	barcode = models.CharField(max_length=200, default='')
+	minTemp = models.IntegerField(default=0)
+	maxTemp = models.IntegerField(default=0)
+
+	def __str__(self):
+		return self.caseName
+
+class CaseSerializer(Serializer):
+	class Meta:
+		model = Case
+		fields = ['caseName', 'barcode', 'CaseId', 'minTemp', 'maxTemp', 'bol']
+
+class BolSerializer(Serializer):
+	cases = CaseSerializer()
+
+	class Meta:
+		model = Bol
+		fields = ['buyer', 'seller', 'cases']
