@@ -11,6 +11,7 @@ class Bol(models.Model):
 	created_at = models.DateTimeField(auto_now_add=True)
 	buyer = models.CharField(max_length=200, default='')
 	seller = models.CharField(max_length=200, default='')
+	truckTemp = models.IntegerField(default=0)
 	# cases = models.TextField(default='')
 
 	def __str__(self):
