@@ -24,4 +24,3 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include(bol_resource.urls)),
 ]
-    ]
