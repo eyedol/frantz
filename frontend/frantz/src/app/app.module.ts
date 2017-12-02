@@ -3,11 +3,13 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppComponent } from './app.component';
+import { BolComponent } from './bol/bol.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BolComponent
   ],
   imports: [
     BrowserModule,
