@@ -1,0 +1,22 @@
+html {
+  min-height: 100%; 
+}
+  
+body {
+  margin-bottom: 3.8rem;
+}
+
+.navbar {
+  .navbar-nav {
+    > li > a {
+      color: #000;
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: #e22028;  
+      }
+    }
+  }
+}
