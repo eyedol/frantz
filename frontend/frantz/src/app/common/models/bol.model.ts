@@ -3,9 +3,11 @@ import { Case } from './case.model'
 
 export class Bol {
   id: number;
+  name: string;
   buyer: string;
-  vendor: string;
+  seller: string;
   resourceUri: string;
   createdAt: string;
   cases: Case[] = undefined;
+  truckTemp: number;
 }

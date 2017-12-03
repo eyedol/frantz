@@ -23,4 +23,8 @@ export class BolsService {
   getMockBols(): Observable<BolResponse> {
     return this.bolsApiService.mockBols()
   }
+
+  addBarcode (caseId: number): string {
+    return "yes"
+  }
 }

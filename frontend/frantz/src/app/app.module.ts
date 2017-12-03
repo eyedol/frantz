@@ -7,13 +7,15 @@ import { BolComponent } from './bol/bol.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { BolsService } from './bol/bols.service';
 import {  HttpClientModule } from '@angular/common/http';
+import { BarcodeComponent } from './barcode/barcode.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     BolComponent,
-    NavigationComponent
+    NavigationComponent,
+    BarcodeComponent
   ],
   imports: [
     BrowserModule,

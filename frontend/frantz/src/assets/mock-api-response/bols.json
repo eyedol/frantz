@@ -1,20 +1,62 @@
 {
     "objects": [
         {
+            "name": "Cauliflower florets 1",
             "buyer": "Herbert",
-            "cases": "{['barcode': 'qewrqwe', 'contract': 'asdasdasdfeafa'}]",
+            "cases": [
+                {
+                    "id": 1,
+                    "barcode": "qewrqwe",
+                    "contract":"contract is going to go here",
+                    "caseId": "case ID goes here",
+                    "caseName": "Case name goes here",
+                    "maxTemp": 20,
+                    "minTemp":7
+                }, 
+                {
+                    "id": 2,
+                    "barcode": "qewrqwe",
+                    "contract":"contract is going to go here 2",
+                    "caseId": "case ID goes here",
+                    "caseName": "Case name goes here",
+                    "maxTemp": 20,
+                    "minTemp":7
+                }
+            ],
             "created_at": "2017-12-02T15:15:43.377142",
             "id": 1,
             "resource_uri": "/api/bol/1/",
-            "vendor": "Hugo"
+            "seller": "Hugo",
+            "truckTemp": 10
         },
         {
+            "name": "Cauliflower florets 2",
             "buyer": "Herbert2",
-            "cases": "[{'barcode': 'asd', 'contract': 'asdfeafa'}]",
+            "cases": [
+                {
+                    "id": 1,
+                    "barcode": "qewrqwe",
+                    "contract":"another contract",
+                    "caseId": "case ID goes here",
+                    "caseName": "Case name goes here",
+                    "maxTemp": 21,
+                    "minTemp":7
+                },
+                {
+                    "id": 2,
+                    "barcode": "qewrqwe",
+                    "contract":"another contracting again",
+                    "caseId": "case ID goes here",
+                    "caseName": "Case name goes here",
+                    "maxTemp": 20,
+                    "minTemp":3
+                }
+            ],
             "created_at": "2017-12-02T15:18:19.203218",
             "id": 2,
             "resource_uri": "/api/bol/2/",
-            "vendor": "Hugo2"
+            "seller": "Hugo2",
+            "truckTemp": 18
         }
     ]
 }
